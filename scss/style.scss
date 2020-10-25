@@ -1,0 +1,133 @@
+@import "variables";
+@import "tipografia";
+@import "estructuras";
+
+/* EFECTO ZOOM */
+.img-hover-zoom {
+    height: auto; 
+    overflow: hidden; 
+  }
+  
+
+  .img-hover-zoom img {
+    transition: transform .5s ease;
+  }
+  
+
+  .img-hover-zoom:hover img {
+    transform: scale(1.5);
+  }
+
+
+
+.texto-servicio{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 4px 8px;
+  color: white;
+  margin: 0;
+  font: 14px Sans-Serif;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  ul{
+    list-style: none;
+     padding:0px;
+       margin:0px;
+       font: $FUENTEMENU;
+    li{
+       display:inline-block;
+        a{
+            text-decoration: none;
+            padding:10px;
+              display:block;
+              color:black;
+              position:relative;
+        } 
+    }
+  }
+
+  a:link,   a:visited,  a:active {
+    text-decoration:none;
+    color: black;
+    
+  }
+
+  
+  li a:after{
+	content:'';
+	width:0%;
+	transition:all 0.3s ease;
+  left:50%;
+  text-decoration: none;
+}
+
+li a:before{
+	content:'';
+	width:0%;
+	transition:all 0.3s ease;
+	left:50%;
+}
+
+li a:hover:after{
+	content:'';
+	position:absolute;
+	bottom:0px;
+	left:50%;
+	background:#f57f17;
+	height:3px;
+  width:50%;
+}
+
+li a:hover:before{
+	content:'';
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	background:#f57f17;
+	height:3px;
+  width:50%;
+}
+
+
+
+.btn {
+    color: #fff;
+    background-color: orange;
+    border-color: black;
+    width: 200px;
+    align-items: center;
+  }
+
+
+  
+  .btn:hover {
+    color: black;
+    background-color: rgb(245, 198, 112);
+    border-color: white;
+  }
+  
+  .btn:focus, .btn .focus {
+    color: black;
+    background-color: orange;
+    border-color: orange;
+    box-shadow: 0 0 0 0.2rem rgba(207, 204, 200, 0.5);
+  }
+
+.btn-primary{
+  color: black;
+}
+
+.btn-light{
+  color: black;
+
+}
+
