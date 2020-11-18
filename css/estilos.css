@@ -1,21 +1,23 @@
-.h1 {
+h1 {
   font: normal 40px "Nunito", sans-serif; }
 
-.h2 {
-  font: normal 20px "Roboto Slab", serif; }
+h2 {
+  font: normal 30px "Roboto Slab", serif;
+  text-align: center; }
 
-.h3 {
+h3 {
   font: normal 16px "Roboto Slab", serif; }
 
 .espaciado16 {
   line-height: 1.6; }
 
-.h5 {
+h5 {
   font: normal 80px "Nunito", sans-serif;
   text-shadow: 0px 3px 5px #000; }
 
-.h4 {
-  font: normal normal 12px "Roboto Slab", serif; }
+h4 {
+  font: normal normal 12px "Roboto Slab", serif;
+  text-align: center; }
 
 .grilla-index {
   display: grid;
@@ -23,7 +25,7 @@
   min-height: 100vh;
   margin: 0 auto;
   grid-template-columns: repeat 12, 1fr;
-  grid-template-rows: 200px 500px 500px 500px 1200px 250px; }
+  grid-template-rows: 200px 500px 500px 1200px auto; }
 
 .grilla-productos {
   display: grid;
@@ -31,7 +33,7 @@
   min-height: 100vh;
   margin: 0 auto;
   grid-template-columns: repeat 12, 1fr;
-  grid-template-rows: 200px 500px auto 250px; }
+  grid-template-rows: 200px 500px auto auto; }
 
 .header {
   grid-column: span 12;
@@ -42,7 +44,7 @@
   align-items: center;
   flex-wrap: wrap; }
 
-.content-index {
+.content-prod {
   grid-column: span 12;
   display: flex;
   align-items: center;
@@ -109,7 +111,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px;
+  padding: 25px;
   flex-wrap: wrap;
   justify-content: space-around; }
 
@@ -121,17 +123,20 @@
 
 .texto-somos {
   flex-direction: column;
-  max-width: 60%;
   display: flex;
   text-align: center;
   margin: 12px;
   padding: 40px;
-  background-color: lightgray; }
+  background-color: lightgray;
+  align-items: center;
+  border-radius: 10px; }
 
 .container-somos {
   display: flex;
   justify-content: center;
-  margin: 12px; }
+  margin: 12px;
+  align-items: center;
+  border-radius: 10px; }
 
 .container-servicios {
   display: flex;
@@ -156,9 +161,156 @@ html {
   flex-direction: column;
   align-items: center; }
 
-@media only screen and (max-width: 680px) {
-  .h5 {
-    font-size: 2rem; } }
+.content1-index img {
+  width: 500px;
+  height: auto;
+  border-radius: 5px; }
+
+.content2-index img {
+  width: 500px;
+  height: auto;
+  border-radius: 5px; }
+
+.fa-facebook {
+  padding-right: 10px; }
+
+.fa-instagram {
+  padding-right: 10px; }
+
+.col-md-4 {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; }
+
+.cold-md-4 .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00aaaa;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out; }
+
+.col-md-4:hover .overlay {
+  opacity: 1; }
+
+.overlay span {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font: normal 20px "Nunito", sans-serif;
+  background-color: rgba(0, 0, 0, 0.45);
+  font-size: 30px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px; }
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .grilla-index {
+    display: grid;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto; }
+  .header {
+    align-items: center; }
+  .header img {
+    width: 300px; }
+  .content1-index {
+    max-width: 100%; }
+  .content2-index {
+    max-width: 100%; }
+  .container-somos {
+    max-width: 320px;
+    flex-direction: column; }
+  .content-presupuesto {
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: auto;
+    padding: 20px;
+    margin: 5px;
+    text-align: center; }
+  .btn
+.btn-dark {
+    margin-top: 5px; }
+  .imagen-somos img {
+    max-width: 300px; }
+  .content-prod {
+    max-width: auto; }
+  .container-fluid img {
+    margin-top: 10px; }
+  h5 {
+    font-size: 40px; }
+  .grilla-productos {
+    display: grid;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto; }
+  .content-productos {
+    justify-content: space-around;
+    max-width: auto; }
+  div iframe {
+    width: 300px; }
+  .lineaVertical {
+    align-content: center; } }
+
+@media only screen and (max-width: 768px) {
+  .grilla-index {
+    display: grid;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto; }
+  .header {
+    align-items: center; }
+  .header img {
+    width: 300px; }
+  .content1-index {
+    max-width: 100%; }
+  .content2-index {
+    max-width: 100%; }
+  .container-somos {
+    max-width: 100%;
+    flex-direction: column; }
+  .content-presupuesto {
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: auto;
+    padding: 20px;
+    margin: 5px;
+    text-align: center; }
+  .btn
+.btn-dark {
+    margin-top: 5px; }
+  .imagen-somos img {
+    max-width: 300px; }
+  .content-prod {
+    max-width: auto; }
+  .container-fluid img {
+    margin-top: 10px; }
+  h5 {
+    font-size: 40px; }
+  .grilla-productos {
+    display: grid;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto; }
+  .content-productos {
+    justify-content: space-around;
+    max-width: auto; }
+  div iframe {
+    width: 100%; }
+  .lineaVertical {
+    align-content: center; } }
 
 /* EFECTO ZOOM */
 .img-hover-zoom {
